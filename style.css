@@ -1,0 +1,74 @@
+body {
+	background: linear-gradient(to top, #0c739f, #40c5d3);
+	font-family: Tahoma, Geneva, sans-serif;
+	line-height: 1.5;
+}
+
+/*HEADER*/
+header {
+	height: 410px;
+}
+
+.main_block {
+	width: 1000px;
+	background-color: white;
+	margin: 0 auto;
+}
+
+.background_image {
+	width: 1000px;
+}
+
+.logo {
+	float: left;
+	padding: 11px 0 0 28px;
+}
+
+.contacts {
+	float: right;
+	color: #40c5d3;
+	font-size: 12px;
+}
+
+.countries {
+	display: flex;
+	/*position: absolute;*/
+	justify-content: flex-end;
+}
+
+.countries li {
+	display: inline-block;
+	float: right;
+	width: 55px;
+	font-size: 10px;
+	text-align: center;
+}
+
+/*NAVIGATION*/
+.menu {
+	background-color: #343434;
+	height: 30px;
+	color: white;
+}
+
+.article {
+	display: inline;
+}
+
+/*.article ul {
+	display: none;
+}*/
+.article:hover ul {
+	display: block;
+}
+
+
+/*CONTENT*/
+.information {
+	display: flex-box;
+}
+
+.news {
+	display: flex-box;
+	justify-content: flex-end;
+}
