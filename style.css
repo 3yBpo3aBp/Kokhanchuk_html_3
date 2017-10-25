@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(to top, #0c739f, #40c5d3);
+	background: linear-gradient(to top, #0c739f, #128aa7);
 	font-family: Tahoma, Geneva, sans-serif;
 	line-height: 1.5;
 }
@@ -11,12 +11,15 @@ header {
 
 .main_block {
 	width: 1000px;
-	background-color: white;
+	height: 988px;
 	margin: 0 auto;
+	z-index: 2;
+	background-color: white;
 }
 
 .background_image {
-	width: 1000px;
+	border-top: 1px solid #128aa7;
+	border-bottom: 1px solid #138aa7;
 }
 
 .logo {
@@ -24,51 +27,146 @@ header {
 	padding: 11px 0 0 28px;
 }
 
-.contacts {
-	float: right;
-	color: #40c5d3;
+.contacts li {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 30px;
+	color: #128aa7;
 	font-size: 12px;
 }
 
 .countries {
 	display: flex;
-	/*position: absolute;*/
 	justify-content: flex-end;
+	padding: 35px 20px 0 0;
+	/*height: 103px;*/
 }
 
 .countries li {
-	display: inline-block;
-	float: right;
+	display: block;
 	width: 55px;
 	font-size: 10px;
 	text-align: center;
 }
 
+a {
+	color: #56a2dc;
+}
+
+
 /*NAVIGATION*/
+
 .menu {
+	/*display: flex;
+	justify-content: space-around;
+	align-items: center;*/
+
+	position: relative;
+	padding-left: 40px;
+	margin-top: 2px;
+	/*щоб верхнє зображення не налізало на меню*/
+	height: 28px;
+	
+	border-top: 1px solid #cacbcb;
+	border-bottom: 1px solid #000;
+	/*box-sizing: border-box;*/
+	/*щоб розмір межі входив у розмір блоку*/
+	box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+
 	background-color: #343434;
-	height: 30px;
 	color: white;
+	font-size: 14px;
 }
 
-.article {
-	display: inline;
+.menu li {
+	position: relative;
+	width: 113px;
+	height: 25px;
+	padding: 2px 10px;
+	display: inline-block;
 }
 
-/*.article ul {
+.submenu {
 	display: none;
-}*/
-.article:hover ul {
+	position: absolute;
+
+	border-top: 1px solid transparent;
+	top: 28px;
+	/*щоб тінь підменю не налізала на меню*/
+	
+	box-shadow: -5px 6px 10px 4px rgba(50, 50, 50, 0.75);
+}
+
+.triangular_arrow {
+	font-size: 8px;
+	text-align: top;
+}
+
+.submenu li {
+	display: block;
+	background-color: #343434;
+	width: 130px;
+	margin-left: -10px;
+	text-align: left;
+}
+
+.menu li:hover .submenu {
 	display: block;
 }
 
+.menu li:nth-child(6) {
+	text-align: center;
+}
+/*підрівняв один із пунктів меню*/
+
 
 /*CONTENT*/
+
+.information,
+.news {
+	display: block;
+	width: 208px;
+	height: 546px;
+	background-color: #edeef0;
+	border-left: 1px solid #c7cacf;
+	border-right: 1px solid #c7cacf;
+	text-align: center;
+
+	/*overflow: auto;*/
+	overflow: hidden;
+	/*text-overflow: ellipsis;*/
+}
+
 .information {
-	display: flex-box;
+	float: left;
 }
 
 .news {
-	display: flex-box;
-	justify-content: flex-end;
+	float: right;
+}
+
+.sidebar_header {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 2;
+}
+
+
+/*FOOTER*/
+
+footer {
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	line-height: 30px;
+}
+
+.empty_block {
+	height: 145px;
+	width: 100%;
+	background: linear-gradient(to top, #fff, #11cee1);
+	border-top: 1px solid #5ef0ff;
+	z-index: -1;
+	position: absolute;
+	top: 29px;
 }
